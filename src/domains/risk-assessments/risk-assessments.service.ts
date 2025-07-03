@@ -71,6 +71,7 @@ export class RiskAssessmentsService {
           `Action '${action.action}' with unit '${action.unit}' not found in the system`
         );
       }
+      
 
       return {
         action,
