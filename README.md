@@ -1,99 +1,74 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# MiraDX Risk Assessment API 🚀
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+Hey MiraDX Team! 👋
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+Welcome to the MiraDX Risk Assessment API
 
-## Description
+## Already Hosted for You!
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+**Don't want to run it locally?** No problem! I've already deployed this API for you on **Railway** with a **PostgreSQL database** powered by **Supabase**.
 
-## Project setup
 
+📚 **Live Docs**: https://miradx-api-production.up.railway.app/api/docs
+
+Just visit the live docs link above to start testing the API immediately!
+
+## Quick Start
+
+### 1. Install Dependencies
 ```bash
-$ npm install
+npm install
 ```
 
-## Compile and run the project
+### 2. Set Up Environment
+Create a `.env` file in your project root and add these Supabase configurations:
 
-```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+```env
+SUPABASE_URL=https://cpewjjedadspgfeolvce.supabase.co
+SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNwZXdqamVkYWRzcGdmZW9sdmNlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTE1NjQzMTMsImV4cCI6MjA2NzE0MDMxM30.OZBmrfbpNBBEGURdAj2siokLfmg-fGioBBWis2jAYYY
+SUPABASE_SERVICE_ROLE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNwZXdqamVkYWRzcGdmZW9sdmNlIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1MTU2NDMxMywiZXhwIjoyMDY3MTQwMzEzfQ.B6jdknEybg81FBwmEnwohvJlVCnKf-zsatiKv_-pib0
 ```
 
-## Run tests
+> **⚠️ Disclaimer**: I know this is horrible practice putting these keys up here, but I'm going to risk it. These are dev/demo credentials for the team to get started quickly.
 
+### 3. Start the API
 ```bash
-# unit tests
-$ npm run test
+# Development mode with hot reload
+npm run start:dev
 
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+# Or regular start
+npm run start
 ```
 
-## Deployment
+Your API will be running at `http://localhost:3000` 🎉
 
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
+## 📚 API Documentation
 
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+Once your server is running, check out the **interactive Swagger documentation**:
+
+**👉 [http://localhost:3000/api/docs](http://localhost:3000/api/docs)**
+
+Here you can:
+- 🔍 Explore all available endpoints
+- 🧪 Test API calls directly in the browser
+- 📖 See request/response examples
+- 🎯 Understand the data models
+
+## 🧪 Running Tests
+
+### End-to-End Tests
+I have created a end to end test file to cover the scenarios I thought were most important for this specific application.
 
 ```bash
-$ npm install -g @nestjs/mau
-$ mau deploy
+npm run test:e2e
 ```
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
 
-## Resources
+## 🎯 API Endpoints
 
-Check out a few resources that may come in handy when working with NestJS:
+All endpoints are prefixed with `/api`:
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
-# miradx-api
+- **GET** `/api/health` - Check if the server is running
+- **GET** `/api/commuters` - Get all commuters with optional filtering
+- **GET** `/api/micromort-actions` - Get all available risk actions
+- **POST** `/api/risk-assessments` - Calculate risk for a commuter's daily activities
